@@ -4,7 +4,7 @@ Clone the repository with
 
 Run npm install
 
-  ~ npm install
+  ~ cd test && npm install
 
 Run the app
 
