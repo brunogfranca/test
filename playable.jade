@@ -1,0 +1,60 @@
+head
+  script(src='http://localhost:8888/jquery.js')
+  script(src='http://localhost:8888/playable.js')
+h1= title
+
+:stylus
+  .no_border, .no_border:hover
+    border solid 1px #CCC !important
+    background-color: #FFF !important
+
+  .board tr td
+    width 100px
+    height 100px
+    border solid 1px #CCC
+    text-align center
+
+  .board tr td:hover
+    background-color: #CCC
+    border-color: #666
+
+  .player_square
+    background-color: #FF0000
+    border-color: #000
+
+  .player_square:hover
+    background-color: #FF6666 !important
+
+div(style="width:500px;float:left")
+  table.board
+    tr
+      td.player_square#square_0 GO!
+      td#square_1 Rent
+      td#square_2 Utility
+      td#square_3 Utility
+      td#square_4 Rent
+    tr
+      td#square_15 Utility
+      td.no_border(colspan="3", rowspan="3") MONOPOLY
+      td#square_5 Utility
+    tr
+      td#square_14 Rent
+      td#square_6 Rent
+    tr
+      td#square_13 Rent
+      td#square_7 Rent
+    tr
+      td#square_12 Utility
+      td#square_11 Rent
+      td#square_10 Utility
+      td#square_9 Utility
+      td#square_8 Rent
+
+div(style="float:left")
+  div#cash Cash: $#{cash}
+
+  div
+    button#new_game New Game
+    button#roll_dice Roll Dice
+
+  div#messages
